@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Create from '../pages/Create'
+import Detail from '../pages/Detail'
 import Join from '../pages/Join'
 
 export default [
@@ -15,5 +16,9 @@ export default [
   {
     path: '/join/:ptId',
     element: <Join />
+  },
+  {
+    path: '/detail/:ptId',
+    element: <Detail />
   }
 ]
