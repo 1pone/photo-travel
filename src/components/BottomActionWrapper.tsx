@@ -7,10 +7,12 @@ const BottomActionWrapper: FC<{ children: React.ReactNode }> = props => {
       sx={{
         position: 'absolute',
         left: 0,
-        bottom: '10%',
+        top: '85%',
         width: '100%',
         display: 'flex',
-        justifyContent: 'space-around'
+        flexFlow: 'column nowrap',
+        alignItems: 'center',
+        justifyContent: 'space-between'
       }}
     >
       {props.children}

@@ -1,16 +1,15 @@
 import React, { FC } from 'react'
 
 import { ChooseUserPhoto, GeneratePhoto, PageWrapper } from '../../components'
-import ScenicSpot from './ScenicSpot'
+import TargetTravel from './TargetTravel'
 
-const Create: FC = () => {
+const Join: FC = () => {
   const [step, setStep] = React.useState<number>(0)
-  const [city, setCity] = React.useState('left')
 
   return (
     <PageWrapper>
       {step === 0 ? (
-        <ScenicSpot value={city} onChange={setCity} onNext={() => setStep(step => step + 1)} />
+        <TargetTravel ptId={'xxx'} onNext={() => setStep(step => step + 1)} />
       ) : step === 1 ? (
         <ChooseUserPhoto onNext={() => setStep(step => step + 1)} />
       ) : (
@@ -20,4 +19,4 @@ const Create: FC = () => {
   )
 }
 
-export default Create
+export default Join

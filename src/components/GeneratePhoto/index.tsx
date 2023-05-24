@@ -1,6 +1,5 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 
-import CheckIcon from '@mui/icons-material/Check'
 import ReplayIcon from '@mui/icons-material/Replay'
 import ShareIcon from '@mui/icons-material/Share'
 import { Box, Button, Modal, Typography } from '@mui/material'
@@ -9,7 +8,6 @@ import React, { FC } from 'react'
 import { Carousel } from 'react-responsive-carousel'
 
 import { ReactComponent as BoySVG } from '../../assets/Group_8023.svg'
-import BottomActionWrapper from '../BottomActionWrapper'
 import { BottomPrimaryButton } from '../index'
 const GeneratePhoto: FC = () => {
   const [open, setOpen] = React.useState(0) // 0: close, 1: photo, 2: share
@@ -60,7 +58,7 @@ const GeneratePhoto: FC = () => {
         </Box>
       </Box>
 
-      <BottomPrimaryButton title='分 享' endIcon={<ShareIcon />} onClick={() => setOpen(2)} />
+      <BottomPrimaryButton title='邀请伙伴' endIcon={<ShareIcon />} onClick={() => setOpen(2)} />
 
       <Modal
         open={!!open}
